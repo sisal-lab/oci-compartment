@@ -13,8 +13,8 @@ resource "oci_identity_compartment" "main" {
   #Required
   compartment_id = var.tenancy_ocid
   
-  name = "Sisal-Engineering"
-  description = "Compartment dedicated to Engineering activities"
+  name = var.name
+  description = var.description
   
   #Optional
   enable_delete = true

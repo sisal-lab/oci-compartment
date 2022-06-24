@@ -18,3 +18,11 @@ variable "private_key" {
 variable "fingerprint" {
   type = string
 }
+
+variable "name" {
+  type = string
+}
+
+variable "description" {
+  type = string
+}
