@@ -17,6 +17,17 @@ provider "oci" {
 }
 
 
+data "oci_identity_region_subscriptions" "regions" {
+  #Required
+  tenancy_id = var.tenancy_ocid
+  
+  filter {
+    name = "is_home_region"
+    values = [true]
+  }
+}
+
+
 resource "oci_identity_compartment" "main" {
   #Required
   compartment_id = var.tenancy_ocid
