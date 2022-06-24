@@ -47,6 +47,7 @@ resource "oci_identity_compartment" "main" {
   description = "Compartment dedicated to Engineering activities"
   
   #Optional
+  enable_delete = true
   #defined_tags = {"Operations.CostCenter"= "42"}
   #freeform_tags = {"Department"= "Finance"}
 }
